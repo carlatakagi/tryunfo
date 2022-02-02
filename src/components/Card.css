@@ -1,0 +1,26 @@
+.card-box {
+  align-items: center;
+  border: 7px double rgb(58, 37, 25);
+  border-radius: 30px;
+  height: auto;
+  justify-content: center;
+  margin: auto;
+  width: 60%;
+}
+
+.card-title {
+  color: rgb(58, 37, 25);
+  font-family: Pirata One , sans-serif;
+  font-size: 2.5rem;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+.card-image {
+  border: 5px groove rgb(58, 37, 25);
+  border-radius: 5px;
+  height: auto;
+  margin: 10px;
+}

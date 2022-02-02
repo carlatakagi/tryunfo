@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Card.css';
 
 class Card extends React.Component {
   render() {
@@ -8,23 +9,49 @@ class Card extends React.Component {
 
     return (
       <div>
-        <p>aqui começa o card</p>
-        <h2 data-testid="name-card">{ cardName }</h2>
 
-        <img src={ cardImage } alt={ cardName } data-testid="image-card" />
+        <div className="card-box">
+          <h1 className="card-title">WANTED</h1>
+          <img
+            className="card-image"
+            name="image"
+            src={ cardImage }
+            alt={ cardName }
+            data-testid="image-card"
+          />
 
-        <p data-testid="description-card">{cardDescription}</p>
+          <h2 name="name" data-testid="name-card">{ cardName }</h2>
 
-        <p data-testid="attr1-card">{cardAttr1}</p>
+          <p
+            name="description"
+            data-testid="description-card"
+          >
+            { `Descrição: ${cardDescription}` }
+          </p>
 
-        <p data-testid="attr2-card">{cardAttr2}</p>
+          <p name="attr1" data-testid="attr1-card">{ `Defesa: ${cardAttr1}` }</p>
 
-        <p data-testid="attr3-card">{cardAttr3}</p>
+          <p name="attr2" data-testid="attr2-card">{ `Ataque: ${cardAttr2}` }</p>
 
-        <p data-testid="rare-card">{cardRare}</p>
+          <p
+            name="attr3"
+            data-testid="attr3-card"
+          >
+            { `Recompensa: ฿ ${cardAttr3}.000.000,00` }
+          </p>
 
-        {cardTrunfo ? <p data-testid="trunfo-card">Super Trunfo</p> : <p />}
+          <p
+            name="rare"
+            data-testid="rare-card"
+          >
+            { `Este personagem é ${cardRare}` }
 
+          </p>
+
+          {/* https://pt-br.reactjs.org/docs/conditional-rendering.html */}
+          { cardTrunfo ? <p data-testid="trunfo-card">Super Trunfo</p> : <p />}
+
+        </div>
       </div>
     );
   }
@@ -33,9 +60,9 @@ class Card extends React.Component {
 Card.propTypes = {
   cardName: PropTypes.string.isRequired,
   cardDescription: PropTypes.string.isRequired,
-  cardAttr1: PropTypes.string.isRequired,
-  cardAttr2: PropTypes.string.isRequired,
-  cardAttr3: PropTypes.string.isRequired,
+  cardAttr1: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  cardAttr2: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  cardAttr3: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   cardImage: PropTypes.string.isRequired,
   cardRare: PropTypes.string.isRequired,
   cardTrunfo: PropTypes.bool.isRequired,
