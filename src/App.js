@@ -40,6 +40,7 @@ class App extends React.Component {
     };
   }
 
+  // funcao de clicar no botao de salvar
   onSaveButtonClick = () => {
     const {
       cardName,
