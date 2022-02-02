@@ -68,6 +68,13 @@ class App extends React.Component {
       hasTrunfo,
     });
 
+    // verifica se hastrunfo = false e cardtrunfo = verdadeiro e muda o estado de hastrunfo para true
+    if (!hasTrunfo && cardTrunfo) {
+      this.setState({
+        hasTrunfo: true,
+      });
+    }
+
     // ao clicar retorna tudo vazio, cardRare normal
     // ao clicar no botão irá checar se existe algum trunfo na lista allcards
     this.setState({
@@ -79,9 +86,6 @@ class App extends React.Component {
       cardImage: '',
       cardRare: 'normal',
       cardTrunfo: false,
-      hasTrunfo: false,
-    }, () => {
-      this.checkIfHasTrunfo();
     });
   }
 
@@ -98,13 +102,6 @@ class App extends React.Component {
       type: target.type,
       name: target.name,
     });
-  }
-
-  // checa se existe algum super trunfo na lista de todas as cartas // nao deu certo
-  checkIfHasTrunfo = () => {
-    const { allCards } = this.state;
-    const thereIsOneTrunfo = allCards.some((card) => card.hasTrunfo === true);
-    this.setState({ hasTrunfo: thereIsOneTrunfo });
   }
 
   // requisito 5 - caos e confusão, minha irmã me ajudou a resolver
