@@ -119,20 +119,20 @@ class Form extends React.Component {
         </label>
 
         {/* se tem o trunfo (hasTrunfo - boolean), deve retornar o texto 'Você já tem um Super Trunfo em seu baralho' ao invés de mostar a label */}
-        <label htmlFor="trunfo-input">
         { hasTrunfo ? <p>Você já tem um Super Trunfo em seu baralho</p>
-          : {(
-          <input
-            id="trunfoInput"
-            type="checkbox"
-            name="cardTrunfo"
-            checked={ cardTrunfo }
-            data-testid="trunfo-input"
-            onChange={ onInputChange }
-          />
-          Super Trunfo
-        )}
-        </label>
+          : (
+            <label htmlFor="trunfo-input">
+              <input
+                id="trunfoInput"
+                type="checkbox"
+                name="cardTrunfo"
+                checked={ cardTrunfo }
+                data-testid="trunfo-input"
+                onChange={ onInputChange }
+              />
+              Super Trunfo
+            </label>
+          )}
 
         <button
           id="saveButton"
