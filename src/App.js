@@ -41,6 +41,7 @@ class App extends React.Component {
   }
 
   // funcao de clicar no botao de salvar
+  // implementar logica para salvar - dar um push - infos da const na lista - array - allCards
   onSaveButtonClick = () => {
     const {
       cardName,
@@ -52,7 +53,20 @@ class App extends React.Component {
       cardRare,
       cardTrunfo,
       hasTrunfo,
+      allCards,
     } = this.state;
+
+    allCards.push({
+      cardName,
+      cardDescription,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardImage,
+      cardRare,
+      cardTrunfo,
+      hasTrunfo,
+    });
 
     // ao clicar retorna tudo vazio, cardRare normal
     // ao clicar no botão irá checar se existe algum trunfo na lista allcards
