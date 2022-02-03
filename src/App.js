@@ -167,6 +167,7 @@ class App extends React.Component {
       cardTrunfo,
       hasTrunfo,
       isSaveButtonDisabled,
+      allCards,
     } = this.state;
 
     return (
@@ -205,6 +206,26 @@ class App extends React.Component {
               cardRare={ cardRare }
               cardTrunfo={ cardTrunfo }
             />
+          </div>
+
+          {/* 'guarda' todas as cartas, primeiro mapeia a lista allCards e retorna as infos no componente card */}
+          <div className="card-list">
+            <h2 className="title-list">Todas as cartas</h2>
+            <div className="all-cards">
+              {allCards.map((card) => (
+                <Card
+                  key={ card.cardName }
+                  cardName={ card.cardName }
+                  cardDescription={ card.cardDescription }
+                  cardAttr1={ card.cardAttr1 }
+                  cardAttr2={ card.cardAttr2 }
+                  cardAttr3={ card.cardAttr3 }
+                  cardImage={ card.cardImage }
+                  cardRare={ card.cardRare }
+                  cardTrunfo={ card.cardTrunfo }
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
