@@ -62,7 +62,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 $ git clone git@github.com:carlatakagi/tryunfo.git
 
 # Acesse a pasta do projeto no seu terminal/cmd
-$ cd solar-system
+$ cd tryunfo
 
 # Instale as dependências:
 $ npm install
