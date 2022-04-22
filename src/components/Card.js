@@ -8,7 +8,7 @@ class Card extends React.Component {
       cardImage, cardRare, cardTrunfo } = this.props;
 
     return (
-      <div>
+      <div className="cards">
 
         <div className="card-box">
           <h1 className="card-title">WANTED</h1>
