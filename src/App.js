@@ -207,9 +207,10 @@ class App extends React.Component {
               cardTrunfo={ cardTrunfo }
             />
           </div>
+        </div>
 
-          {/* 'guarda' todas as cartas, primeiro mapeia a lista allCards e retorna as infos no componente card */}
-          <div className="card-list">
+        {/* 'guarda' todas as cartas, primeiro mapeia a lista allCards e retorna as infos no componente card */}
+        <div className="card-list">
             <h2 className="title-list">Todas as cartas</h2>
             <div className="all-cards">
               {allCards.map((card) => (
@@ -227,7 +228,6 @@ class App extends React.Component {
               ))}
             </div>
           </div>
-        </div>
       </div>
     );
   }
