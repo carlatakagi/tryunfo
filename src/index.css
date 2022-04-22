@@ -14,7 +14,7 @@ code {
 
 header {
   align-items: center;
-  background: rgb(58, 37, 25);
+  background: rgb(98, 59, 36);
   color: rgb(255, 255, 255);
   display: flex;
   padding: 0;
@@ -26,11 +26,12 @@ header {
 }
 
 #container-form-card {
+  border: 3px solid rgb(88, 53, 32);
   display: flex;
 }
 
 .form-container {
-  height: 100vw;
+  height: 60vw;
   padding: 10px;
   padding-top: 30px;
   width: 50%;
@@ -39,10 +40,10 @@ header {
 .card-container {
   align-items: center;
   background: rgb(228, 218, 160);
-  height: 100vw;
+  height: 60vw;
   justify-content: center;
-  padding: 10px;
-  padding-top: 30px;
+  padding: 110px;
+  padding-top: 60px;
   text-align: center;
   width: 50%;
 }
@@ -53,14 +54,26 @@ header {
 }
 
 .card-list {
+  align-items: flex-start;
+  background: rgb(228, 218, 160);
   display: flex;
+  flex-direction: column;
+  height: auto;
   justify-content: center;
-  margin: 0;
+  width: 100%;
 }
 
 .title-list {
   color: rgb(58, 37, 25);
   font-family: Pirata One , sans-serif;
   font-size: 2.5rem;
+  padding-left: 20px;;
   text-decoration: none;
+}
+
+.all-cards {
+  display: inline-block;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
 }
